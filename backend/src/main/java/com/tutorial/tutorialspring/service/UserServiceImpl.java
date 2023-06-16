@@ -19,6 +19,22 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean Login(User user) {
-        return null;
+        // Get username
+        String email = user.getEmail();
+        // Get password
+        String password = user.getPassword();
+
+        // Search for user within the db
+        User findUser = userRepository.findByEmail(email);
+
+        // Check if the user has been found
+        if(findUser != null){
+            // The user has been found
+            return true;
+        }else{
+            // The user has not been found
+            return false;
+        }
+
     }
 }

@@ -20,4 +20,13 @@ public class UserController {
         userService.Register(user);
         return "Registed";
     }
+
+
+
+    @PostMapping("/login")
+    public Boolean Login(@RequestBody User user){
+        return userService.Login(user);
+    }
+
+
 }

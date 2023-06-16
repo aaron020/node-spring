@@ -11,6 +11,21 @@ export const Login = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        const user={email,password}
+        fetch("/api/user/login",{
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify(user)
+        }).then(response=>{
+            if(response.ok){
+                // user can login 
+                console.log("User login ")
+            }else{
+                console.log("User cant login")
+            }
+        }).catch(error=>{
+            console.log(error)
+        })
     }
 
 

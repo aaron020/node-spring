@@ -10,7 +10,7 @@ export const Register = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         const user={name,email,password}
-        fetch("http://178.128.33.195:8080/user/register",{
+        fetch("/api/user/register",{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(user)
