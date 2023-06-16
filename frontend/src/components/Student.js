@@ -51,7 +51,7 @@ export default function Student() {
         <TextField id="outlined-basic" label="Student Address" variant="outlined" fullWidth
         value={address}
         onChange={(e)=>setAddress(e.target.value)}/>
-        <Button variant="outlined" onClick={handleClick}>Submit</Button>
+        <Button variant="outlined" onClick={handleClick}>Click Here To Add</Button>
 
 
         </Box>
