@@ -36,7 +36,7 @@ export default function Student() {
     return (
         <Container>
             <Paper elevation={3} style={paperStyle}>
-                <h1>Add Student</h1>
+                <h1>Add New Student</h1>
         <Box
         component="form"
         sx={{
