@@ -1,0 +1,11 @@
+docker-compose down
+
+
+docker-compose build <container>
+
+
+# if the front end - need to remove the webdata volume 
+docker volume ls
+docker volume rm <webdata name>
+
+docker-compose up -d 
