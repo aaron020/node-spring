@@ -1,16 +1,23 @@
 import React, {useState} from 'react';
 
+
 export const Register = (props) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const url_begin = "http://localhost:8080/"
 
 
     
     const handleSubmit = (e) => {
         e.preventDefault()
         const user={name,email,password}
-        fetch("/api/user/register",{
+        
+
+        console.log(url_begin)
+        const url = url_begin + "user/register"
+        fetch(url,{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(user)
