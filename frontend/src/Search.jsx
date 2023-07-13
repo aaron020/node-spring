@@ -4,6 +4,7 @@ import {Container, Row, Col, Form,InputGroup,Button,Card,Image} from 'react-boot
 import TestImage from './TestImage.jpg'
 import SearchCard from './components/Search/SearchCard'
 import { useNavigate } from 'react-router-dom';
+import ProfileImage from './components/ProfileImage';
 
 
 export const Search = (props) => {
@@ -71,7 +72,6 @@ return(
     <Row>
     {searchResponse.map((result, index) => (
         <SearchCard
-        imageSrc={TestImage}
         profileId={result.profileId}
         title={result.first_name + ' ' + result.last_name}
         subtitle={result.occupation_1 + ' ' + result.occupation_2 + ' ' + result.occupation_3 }

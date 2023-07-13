@@ -15,7 +15,7 @@ function NavScrollExample() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="#">NepoCheck</Navbar.Brand>
+        <Navbar.Brand href="/">NepoCheck</Navbar.Brand>
           <Form className="d-flex align-items-center justify-content-center">
 
             <Button variant="outline-success" onClick={searchClick}>

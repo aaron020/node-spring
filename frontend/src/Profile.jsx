@@ -1,6 +1,5 @@
 import React, { useEffect ,useState } from "react"
 import {Button, Container, Row, Col} from 'react-bootstrap'
-import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
 import NavBar from './components/Navbar'
 import TestImage from './TestImage.jpg'
@@ -8,6 +7,7 @@ import { ListGroup } from 'react-bootstrap';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Accordion from 'react-bootstrap/Accordion';
 import { useLocation } from 'react-router-dom';
+import ProfileImage from "./components/ProfileImage";
 
 
 
@@ -52,8 +52,11 @@ export const Profile = (props) => {
                 <Col lg={4}>
                     <Card className="mb-4 shadow">
                         <Card.Body className="text-center"> 
-                            <Image src={TestImage} roundedCircle className="img-fluid mx-auto shadow"
-                            style={{objectFit: 'cover', width: '170px', height: '170px' }} /> 
+                            <ProfileImage
+                            profileId={id}
+                            roundedCircle
+                            style={{ objectFit: 'cover', width: '170px', height: '170px' }}
+                            />
                             <h5 class="my-3">{profileData?.profiledata?.first_name} {profileData?.profiledata?.last_name}</h5>
                             <p class="text-muted mb-4">{profileData?.profiledata?.occupation_1} {profileData?.profiledata?.occupation_2} {profileData?.career?.occupation_3}</p>
                             <h6 className="mb-4 mt-5">Nepotism Rating: </h6>

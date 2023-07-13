@@ -10,6 +10,8 @@ import {CreateProfile} from './CreateProfile'
 import { Search } from './Search';
 import {NotFound} from './NotFound'
 import { EditProfile } from './EditProfile';
+import { CreateUser } from './CreateUser';
+import { LoginUser } from './LoginUser';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -25,10 +27,13 @@ function App(){
   return(
     <Router>
       <Routes>
+        <Route exact path="/" element={<Homepage/>} />
         <Route exact path="/profile" element={<Profile/>} />
         <Route exact path="/profile/create" element={<CreateProfile/>} />
         <Route exact path="/profile/edit" element={<EditProfile/>} />
         <Route exact path="/profile/search" element={<Search/>} />
+        <Route exact path="/user/create" element={<CreateUser/>} />
+        <Route exact path="/user/login" element={<LoginUser/>} />
         <Route exact path="*" element={<NotFound/>} />
       </Routes>
     </Router>
